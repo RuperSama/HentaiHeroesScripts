@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         HaremHeroes Sell
-// @namespace    http://tampermonkey.net/
+// @namespace    HentaiHeroe-Helpers
+// @updateURL    https://github.com/RuperSama/HentaiHeroesScripts
 // @version      0.1
 // @description  Sell all items in the inventory, Stop when a legendary items with good stats is in the first slot (User should sell or equip that item then refresh for the script continue)
 // @author       RuperSama
