@@ -1,7 +1,7 @@
 # HentaiHeroes Scripts
 
 Hello, here i am going to put alot of mini-script for the game HentaiHero (No one is bot for auto-play) all my scripts are automatic because insert UI is a little hard.
-All my scripts are made for HentaHeroes main page, i dont know if the work un nutaku version or the "gay" version of the game.
+All my scripts are made for HentaHeroes main page, i dont know if the work on nutaku version or the "gay" version of the game.
 
 ***HentaiHeroes-Sell.js***: Sell all items in the inventory but if the items is legendary and have better stats that the equiped the script stop, then the user manually should chose between sell the item or equip it (you need refresh the page for the script start run again).
 
