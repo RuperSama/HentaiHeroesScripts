@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HaremHeroes HideInfo
 // @namespace    HentaiHeroe-Helpers
-// @updateURL    https://github.com/RuperSama/HentaiHeroesScripts
+// @updateURL    https://raw.githubusercontent.com/RuperSama/HentaiHeroesScripts/main/HentaiHeroes-HideInfo.js
 // @version      1.0
 // @description  HideStuffs for the UI
 // @author       RuperSama, cossname

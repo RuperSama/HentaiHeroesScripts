@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HaremHeroes Login
 // @namespace    HentaiHeroe-Helpers
-// @updateURL    https://github.com/RuperSama/HentaiHeroesScripts
+// @updateURL    https://raw.githubusercontent.com/RuperSama/HentaiHeroesScripts/main/HentaiHeroes-AutoLogin.js
 // @version      0.1
 // @description  AutoLogin
 // @author       RuperSama

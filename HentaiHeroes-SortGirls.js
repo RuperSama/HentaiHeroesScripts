@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HaremHeroes GirlSorter
 // @namespace    HentaiHeroe-Helpers
-// @updateURL    https://github.com/RuperSama/HentaiHeroesScripts
+// @updateURL   https://raw.githubusercontent.com/RuperSama/HentaiHeroesScripts/main/HentaiHeroes-SortGirls.js
 // @version      1.03
 // @description  Sort girls for lower lvl up to higher
 // @author       Dorten
