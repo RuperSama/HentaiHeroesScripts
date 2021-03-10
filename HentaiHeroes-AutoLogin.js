@@ -56,7 +56,7 @@ function hhFrame(){
 
 function load(){
     try{
-        if(pass == "" || userEmail == "") alert("Cant make autoLogin, you need to edit the script for add your userName and Password")
+        if(userPass == "" || userEmail == "") alert("Cant make autoLogin, you need to edit the script for add your userName and Password")
         else if(window.location.href.includes("kinkoid")) setTimeout(login,5000);
         else setTimeout(hhFrame,5000);
     }catch(error){
