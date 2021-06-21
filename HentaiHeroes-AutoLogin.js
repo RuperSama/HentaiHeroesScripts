@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         HaremHeroes Login
 // @namespace    HentaiHeroe-Helpers
-// @updateURL    https://raw.githubusercontent.com/RuperSama/HentaiHeroesScripts/main/HentaiHeroes-AutoLogin.js
 // @version      0.1
-// @description  AutoLogin
+// @description  AutoLogin For HH
 // @author       RuperSama
 // @match        http*://eggs-ext.kinkoid.com/*
 // @match        http*://*.hentaiheroes.com/*
+// @match        http*://*.comixharem.com/*
+// @updateURL    https://raw.githubusercontent.com/RuperSama/HentaiHeroesScripts/main/HentaiHeroes-AutoLogin.js
 // @grant        none
 // ==/UserScript==
 
@@ -23,8 +24,8 @@ var userEmail = "hi@gmail.com";
 var userPass = "987987987";
 */
 
-var userEmail = "";
-var userPass = "";
+var userEmail = "rupersama@gmail.com";
+var userPass = "123456";
 
 //This function work for write the info in the text box for login
 function login(){
