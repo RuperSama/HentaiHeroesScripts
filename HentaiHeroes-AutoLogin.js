@@ -1,50 +1,34 @@
 // ==UserScript==
 // @name         HaremHeroes Login
-// @namespace    HentaiHeroe-Helpers
-// @version      0.1
-// @description  AutoLogin For HH
+// @namespace    https://github.com/Roukys/HHauto
+// @version      0.2
+// @description  AutoLogin
 // @author       RuperSama
 // @match        http*://eggs-ext.kinkoid.com/*
 // @match        http*://*.hentaiheroes.com/*
 // @match        http*://*.comixharem.com/*
-// @updateURL    https://raw.githubusercontent.com/RuperSama/HentaiHeroesScripts/main/HentaiHeroes-AutoLogin.js
 // @grant        none
 // ==/UserScript==
 
-
-/*
-For this script to work you need to edit the "userEmail" and "userPass" value
-here an example.
-Current:
 var userEmail = "";
 var userPass = "";
-
-Objetive:
-var userEmail = "hi@gmail.com";
-var userPass = "987987987";
-*/
-
-var userEmail = "rupersama@gmail.com";
-var userPass = "123456";
-
-//This function work for write the info in the text box for login
+var timerRefresh = null;
 function login(){
     var email = document.getElementById("auth-email");
     var pass = document.getElementById("auth-password");
-    email.value = userEmail;
-    pass.value = userPass;
-    //Make a delay before pressing the login button for be sure the text box are updated
+    if(email != null) email.value = userEmail;
+    if(pass != null)pass.value = userPass;
     setTimeout(submitlogin,3000);
 }
 
-//This function just click the "login" button
 function submitlogin()
 {
     var btn = document.getElementById("submit-authenticate");
-    btn.click();
+    var btn2 = document.getElementById("sso-submit");
+    try{btn2.click();}catch(error){}
+    try{btn.click();}catch(error){}
 }
 
-//This function work for click in the "connect" button in the top-left corner
 function hhFrame(){
     var iframe = document.getElementById("hh_game");
     if(iframe == null) return;
@@ -55,14 +39,34 @@ function hhFrame(){
     }
 }
 
+function refresh(){
+    if(timerRefresh == null){
+        timerRefresh = new Date();
+    }
+    var nDate = new Date();
+    var diff = nDate.getTime() - timerRefresh.getTime();
+    diff = diff / (1000 * 60 * 30)
+    if(diff > 1){
+        document.location.reload();
+    }
+    else{
+        setTimeout(refresh,5000);
+    }
+}
+
 function load(){
     try{
-        if(userPass == "" || userEmail == "") alert("Cant make autoLogin, you need to edit the script for add your userName and Password")
-        else if(window.location.href.includes("kinkoid")) setTimeout(login,5000);
-        else setTimeout(hhFrame,5000);
+        refresh();
+        if(window.location.href.includes("kinkoid")){
+            setTimeout(login,5000);
+        }
+        else{
+            setTimeout(hhFrame,5000);
+        }
     }catch(error){
         setTimeout(load,2000);
     }
+
 }
 
 window.onload = load();
