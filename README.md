@@ -10,3 +10,5 @@ All my scripts are made for HentaHeroes main page, i dont know if the work on nu
 ***HentaiHeroes-AutoLogin.js***: Make automatic login to the game (Sometimes the game auto-log off the player) the script need to be edited before work for add the value of the email and password inside.
 
 ***HentaiHeroes-HideInfo.js(deprecated)***: Hide the porn ad in the "home", When you want to change your team hide all girls except the legendary, Hide complete match in "tower of fame", Hide claimed reward in "Season", Hide claimed rewards in "Path of attraction" events
+
+***HentaiHeroes-AutoBang.js***: Automatic do bang event, the user must full then enable the script then do one fight manually for the script start working
