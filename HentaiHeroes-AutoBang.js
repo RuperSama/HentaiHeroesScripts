@@ -16,7 +16,7 @@
 
 function startScript(){
     try{
-    // attempting to stop the script when boss bang event is completed, not properly tested :
+    // attempting to stop the script when event is completed or when the game isn't on the Boss Bang tab :
         let url = window.location.href.split("?");
         if(url.length != 2){
             //console.log("Not on Boss Bang page.");
