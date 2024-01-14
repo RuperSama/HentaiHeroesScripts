@@ -15,16 +15,29 @@
 // ==/UserScript==
 
 function startScript(){
+    // attempting to stop the script when boss bang event is completed, not properly tested :
+    if(document.getElementsByClassName("boss-bang-event-info completed-event") != null){
+        return;
+    }
     try{
         if(document.getElementById("new-battle-skip-btn") != null){
-            document.getElementById("new-battle-skip-btn").click()
+            document.getElementById("new-battle-skip-btn").click();
+            //console.log("new-battle-skip-btn clicked");
         }
         if(document.getElementById("start-bang-button") != null){
-            document.getElementById("start-bang-button").click()
+            document.getElementById("start-bang-button").click();
+            //console.log("start-bang-button clicked");
+        }
+        if(document.getElementsByClassName("blue_button_L").length > 1){
+            for(i = 0; i <= document.getElementsByClassName("blue_button_L").length; i++){
+                //console.log(document.getElementsByClassName("blue_button_L")[i].id)
+                if(document.getElementsByClassName("blue_button_L")[i].id == ""){
+                    document.getElementsByClassName("blue_button_L")[i].click();
+                    //console.log("blue_button_L clicked");
+                    break;
+                }
             }
-        if(document.getElementsByClassName("blue_button_L").length > 0){
-            document.getElementsByClassName("blue_button_L")[0].click();
-            }
+        }
     }
     catch(e){
         var a = e;
