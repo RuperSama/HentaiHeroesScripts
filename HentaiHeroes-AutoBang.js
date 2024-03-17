@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         HH AutoBang
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  try to take over the world!
-// @author       RuperSama, cossname
+// @author       RuperSama, cossname, YotoTheOne
 // @match        http*://*.haremheroes.com/*
 // @match        http*://*.hentaiheroes.com/*
 // @match        http*://*.gayharem.com/*
