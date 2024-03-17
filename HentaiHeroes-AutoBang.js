@@ -16,37 +16,19 @@
 
 function startScript(){
     try{
-    // attempting to stop the script when event is completed or when the game isn't on the Boss Bang tab :
-        let url = window.location.href.split("?");
-        if(url.length != 2){
-            //console.log("Not on Boss Bang page.");
-            return;
-        }
-        else if(url[1].slice(4, 19) != "boss_bang_event"){
-            //console.log("Not on Boss Bang page.");
-            return;
-        }
-        if(document.getElementsByClassName("boss-bang-event-info completed-event") != null){
-            //console.log("Boss Bang event completed.");
-            return;
-        }
-        let btn = document.getElementById("new-battle-skip-btn");
-        if(btn != null){
-            btn.click();
+        if(document.getElementById("new-battle-skip-btn") != null){
+            document.getElementById("new-battle-skip-btn").click();
             //console.log("new-battle-skip-btn clicked");
         }
-        btn = document.getElementById("start-bang-button");
-        if(btn != null){
-            btn.click();
+        if(document.getElementById("start-bang-button") != null){
+            document.getElementById("start-bang-button").click();
             //console.log("start-bang-button clicked");
         }
-        let btn_list = document.getElementsByClassName("blue_button_L");
-        let lg = btn_list.length;
-        if(lg > 1){
-            for(let i = 0; i < lg; i++){
-                //console.log(btn_list[i].id)
-                if(btn_list[i].id == ""){
-                    btn_list[i].click();
+        if(document.getElementsByClassName("blue_button_L").length > 1){
+            for(i = 0; i <= document.getElementsByClassName("blue_button_L").length; i++){
+                //console.log(document.getElementsByClassName("blue_button_L")[i].id)
+                if(document.getElementsByClassName("blue_button_L")[i].id == ""){
+                    document.getElementsByClassName("blue_button_L")[i].click();
                     //console.log("blue_button_L clicked");
                     break;
                 }
@@ -54,12 +36,16 @@ function startScript(){
         }
     }
     catch(e){
-        console.log(e);
+        var a = e;
     }
     finally{
         setTimeout(startScript, 1000);
     }
 }
+
+
+
+
 
 
 window.onload = startScript();
